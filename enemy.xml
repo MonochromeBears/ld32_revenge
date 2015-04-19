@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="11" version="1.0" version_name="Godot Engine v1.0.stable.custom_build">
-	<ext_resource path="res://enemy.gd" type="Script"></ext_resource>
-	<ext_resource path="res://sound_explode.wav" type="Sample"></ext_resource>
+	<ext_resource path="res://sounds/sound_punch.wav" type="Sample"></ext_resource>
 	<ext_resource path="res://sprites/blood.tex" type="Texture"></ext_resource>
-	<ext_resource path="res://sound_hit.wav" type="Sample"></ext_resource>
+	<ext_resource path="res://enemy.gd" type="Script"></ext_resource>
+	<ext_resource path="res://sounds/sound_death.wav" type="Sample"></ext_resource>
 	<ext_resource path="res://sprites/enemy_1.tex" type="Texture"></ext_resource>
 	<resource type="CircleShape2D" path="local://0">
 		<real name="custom_solver_bias"> 0 </real>
@@ -145,21 +145,21 @@
 
 	</resource>
 	<resource type="SampleLibrary" path="local://4">
-		<dictionary name="samples/hit" shared="false">
-			<string> "db" </string>
-			<real> 0 </real>
-			<string> "pitch" </string>
-			<real> 1 </real>
-			<string> "sample" </string>
-			<resource  resource_type="Sample" path="res://sound_hit.wav">  </resource>
-		</dictionary>
 		<dictionary name="samples/explode" shared="false">
 			<string> "db" </string>
 			<real> 0 </real>
 			<string> "pitch" </string>
 			<real> 1 </real>
 			<string> "sample" </string>
-			<resource  resource_type="Sample" path="res://sound_explode.wav">  </resource>
+			<resource  resource_type="Sample" path="res://sounds/sound_death.wav">  </resource>
+		</dictionary>
+		<dictionary name="samples/hit" shared="false">
+			<string> "db" </string>
+			<real> 0 </real>
+			<string> "pitch" </string>
+			<real> 1 </real>
+			<string> "sample" </string>
+			<resource  resource_type="Sample" path="res://sounds/sound_punch.wav">  </resource>
 		</dictionary>
 
 	</resource>
