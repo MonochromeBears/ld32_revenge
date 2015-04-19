@@ -55,7 +55,7 @@ var floor_h_velocity=0.0
 var enemy
 
 func _integrate_forces(s):
-
+	get_node("interfaice").get_node("time").set_text("Time: " + str(get_node("Timer").get_time_left()))
 	var lv = s.get_linear_velocity()
 	var step = s.get_step()
 	
