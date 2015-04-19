@@ -24,6 +24,8 @@ extends RigidBody2D
 # -Friction cant be used, so floor velocity must be considered
 #  for moving platforms.
 
+var coins = 0
+
 var anim=""
 var siding_left=false
 var jumping=false
@@ -237,8 +239,9 @@ func _integrate_forces(s):
 	
 	
 
-	
-	
+func get_coin():
+	coins = coins + 1
+	get_node("Label").set_text("Coins: " + str(coins))
 
 
 func _ready():
