@@ -241,7 +241,7 @@ func _integrate_forces(s):
 
 func get_coin():
 	coins = coins + 1
-	get_node("Label").set_text("Coins: " + str(coins))
+	get_node("interfaice").get_node("score").set_text("Coins: " + str(coins))
 
 
 func _ready():
