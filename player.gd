@@ -114,6 +114,8 @@ func _integrate_forces(s):
 		get_node("sprite/smoke").set_emitting(true)	
 		get_node("sound").play("shoot")
 		PS2D.body_add_collision_exception(bi.get_rid(),get_rid()) # make bullet and this not collide
+		if (siding_left):
+			bi.rotate(3.14)
 
 
 	else:
