@@ -50,6 +50,7 @@ var MAX_SHOOT_POSE_TIME = 0.3
 
 var bullet = preload("res://bullet.xml")
 
+
 var floor_h_velocity=0.0
 var enemy
 
@@ -241,6 +242,9 @@ func _integrate_forces(s):
 
 func get_coin():
 	coins = coins + 1
+	if(coins == 30):
+		get_node("interfaice").get_node("win").set("visibility/visible", true)
+		
 	get_node("interfaice").get_node("score").set_text("Coins: " + str(coins))
 
 
