@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<resource_file type="PackedScene" subresource_count="8" version="1.0" version_name="Godot Engine v1.0.stable.custom_build">
-	<ext_resource path="res://scroll_bg_fg_2.png" type="Texture"></ext_resource>
+<resource_file type="PackedScene" subresource_count="9" version="1.0" version_name="Godot Engine v1.0.stable.custom_build">
 	<ext_resource path="res://scroll_bg_cloud_3.png" type="Texture"></ext_resource>
-	<ext_resource path="res://scroll_bg_fg_1.png" type="Texture"></ext_resource>
-	<ext_resource path="res://scroll_bg_cloud_1.png" type="Texture"></ext_resource>
 	<ext_resource path="res://scroll_bg_sky.png" type="Texture"></ext_resource>
-	<ext_resource path="res://video/ANIME.ogv" type="VideoStreamTheoraplayer"></ext_resource>
+	<ext_resource path="res://video_timer.gd" type="Script"></ext_resource>
+	<ext_resource path="res://scroll_bg_cloud_1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://scroll_bg_fg_2.png" type="Texture"></ext_resource>
 	<ext_resource path="res://scroll_bg_cloud_2.png" type="Texture"></ext_resource>
+	<ext_resource path="res://scroll_bg_fg_1.png" type="Texture"></ext_resource>
+	<ext_resource path="res://video/ANIME.ogv" type="VideoStreamTheoraplayer"></ext_resource>
 	<main_resource>
 		<dictionary name="_bundled" shared="false">
 			<string> "names" </string>
-			<string_array  len="61">
+			<string_array  len="69">
 				<string> "parallax_bg" </string>
 				<string> "ParallaxBackground" </string>
 				<string> "_import_path" </string>
@@ -72,15 +73,23 @@
 				<string> "Sprite 6" </string>
 				<string> "mount_ 2" </string>
 				<string> "mount_1" </string>
+				<string> "Timer" </string>
+				<string> "process/pause_mode" </string>
+				<string> "wait_time" </string>
+				<string> "one_shot" </string>
+				<string> "autostart" </string>
+				<string> "script/script" </string>
+				<string> "_on_Timer_timeout" </string>
+				<string> "timeout" </string>
 			</string_array>
 			<string> "version" </string>
 			<int> 1 </int>
 			<string> "conn_count" </string>
-			<int> 0 </int>
+			<int> 2 </int>
 			<string> "node_count" </string>
-			<int> 15 </int>
+			<int> 16 </int>
 			<string> "variants" </string>
-			<array  len="39" shared="false">
+			<array  len="42" shared="false">
 				<node_path> "" </node_path>
 				<int> -1 </int>
 				<vector2> 0, 0 </vector2>
@@ -93,13 +102,14 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 0 </int>
+							<int> 4 </int>
 							<string> "sources" </string>
-							<array  len="4" shared="false">
+							<array  len="5" shared="false">
 								<string> "res://moving_platform.gd" </string>
 								<string> "res://enemy.gd" </string>
 								<string> "res://player.gd" </string>
 								<string> "res://coin.gd" </string>
+								<string> "res://video_timer.gd" </string>
 							</array>
 						</dictionary>
 						<string> "2D" </string>
@@ -216,7 +226,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -252,12 +262,18 @@
 				<resource  resource_type="Texture" path="res://scroll_bg_fg_2.png">  </resource>
 				<rect2> 0, 0, 800, 256 </rect2>
 				<vector2> 0.4, 1 </vector2>
+				<dictionary  shared="false">
+					<string> "_editor_collapsed" </string>
+					<bool> True </bool>
+				</dictionary>
 				<resource  resource_type="Texture" path="res://scroll_bg_fg_1.png">  </resource>
+				<real> 2 </real>
+				<resource  resource_type="Script" path="res://video_timer.gd">  </resource>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="593"> 				-1, -1, 1, 0, -1, 11, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 2, 8, 2, 9, 5, 10, 2, 11, 2, 12, 6, 0, 0, 0, 14, 13, -1, 21, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 19, 10, 20, 11, 21, 0, 22, 0, 23, 0, 24, 0, 25, 9, 26, 9, 27, 12, 28, 12, 29, 8, 30, 13, 31, 14, 32, 7, 33, 9, 34, 7, 0, 0, 0, 36, 35, -1, 10, 2, 0, 15, 9, 16, 8, 17, 8, 18, 9, 37, 2, 38, 3, 39, 4, 40, 4, 41, 15, 0, 2, 0, 42, 42, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 2, 38, 3, 39, 16, 43, 17, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 0, 0, 36, 53, -1, 11, 2, 0, 15, 9, 16, 8, 17, 8, 18, 9, 37, 2, 38, 3, 39, 4, 40, 22, 41, 15, 12, 23, 0, 4, 0, 42, 42, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 24, 38, 3, 39, 4, 43, 25, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 4, 0, 42, 54, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 26, 38, 3, 39, 4, 43, 25, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 4, 0, 42, 55, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 27, 38, 3, 39, 4, 43, 28, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 4, 0, 42, 56, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 29, 38, 3, 39, 4, 43, 28, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 4, 0, 42, 57, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 30, 38, 3, 39, 4, 43, 31, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 4, 0, 42, 58, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 32, 38, 3, 39, 4, 43, 31, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 0, 0, 36, 59, -1, 10, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 2, 38, 3, 39, 4, 40, 33, 41, 15, 0, 11, 0, 42, 42, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 34, 38, 3, 39, 4, 43, 35, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 7, 52, 36, 0, 0, 0, 36, 60, -1, 10, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 2, 38, 3, 39, 4, 40, 37, 41, 15, 0, 13, 0, 42, 42, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 34, 38, 3, 39, 4, 43, 38, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 7, 52, 36, 0 </int_array>
+			<int_array  len="614"> 				-1, -1, 1, 0, -1, 11, 2, 0, 3, 1, 4, 2, 5, 3, 6, 4, 7, 2, 8, 2, 9, 5, 10, 2, 11, 2, 12, 6, 0, 0, 0, 14, 13, -1, 21, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 19, 10, 20, 11, 21, 0, 22, 0, 23, 0, 24, 0, 25, 9, 26, 9, 27, 12, 28, 12, 29, 8, 30, 13, 31, 14, 32, 7, 33, 9, 34, 7, 0, 0, 0, 36, 35, -1, 10, 2, 0, 15, 9, 16, 8, 17, 8, 18, 9, 37, 2, 38, 3, 39, 4, 40, 4, 41, 15, 0, 2, 0, 42, 42, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 2, 38, 3, 39, 16, 43, 17, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 0, 0, 36, 53, -1, 11, 2, 0, 15, 9, 16, 8, 17, 8, 18, 9, 37, 2, 38, 3, 39, 4, 40, 22, 41, 15, 12, 23, 0, 4, 0, 42, 42, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 24, 38, 3, 39, 4, 43, 25, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 4, 0, 42, 54, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 26, 38, 3, 39, 4, 43, 25, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 4, 0, 42, 55, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 27, 38, 3, 39, 4, 43, 28, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 4, 0, 42, 56, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 29, 38, 3, 39, 4, 43, 28, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 4, 0, 42, 57, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 30, 38, 3, 39, 4, 43, 31, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 4, 0, 42, 58, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 32, 38, 3, 39, 4, 43, 31, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 9, 52, 21, 0, 0, 0, 36, 59, -1, 10, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 2, 38, 3, 39, 4, 40, 33, 41, 15, 0, 11, 0, 42, 42, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 34, 38, 3, 39, 4, 43, 35, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 7, 52, 36, 0, 0, 0, 36, 60, -1, 11, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 2, 38, 3, 39, 4, 40, 37, 41, 15, 12, 38, 0, 13, 0, 42, 42, -1, 19, 2, 0, 15, 7, 16, 8, 17, 8, 18, 9, 37, 34, 38, 3, 39, 4, 43, 39, 44, 9, 4, 2, 45, 9, 46, 9, 47, 18, 48, 18, 49, 19, 50, 20, 51, 7, 52, 36, 0, 0, 0, 61, 61, -1, 6, 2, 0, 62, 12, 63, 40, 64, 9, 65, 7, 66, 41, 0 </int_array>
 			<string> "conns" </string>
-			<int_array  len="0"> 				 </int_array>
+			<int_array  len="12"> 				15, 0, 68, 67, 2, 0, 15, 1, 68, 67, 2, 0 </int_array>
 		</dictionary>
 
 	</main_resource>

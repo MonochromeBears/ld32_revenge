@@ -266,3 +266,7 @@ func _ready():
 
 
 
+
+
+func _on_Timer_timeout():
+	get_node("interfaice").get_node("loose").set("visibility/visible", true)
