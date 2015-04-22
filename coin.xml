@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="9" version="1.0" version_name="Godot Engine v1.0.stable.custom_build">
-	<ext_resource path="res://coin.gd" type="Script"></ext_resource>
 	<ext_resource path="res://coin.png" type="Texture"></ext_resource>
 	<ext_resource path="res://bullet.png" type="Texture"></ext_resource>
+	<ext_resource path="res://coin.gd" type="Script"></ext_resource>
 	<ext_resource path="res://sounds/sound_coin.wav" type="Sample"></ext_resource>
 	<resource type="CircleShape2D" path="local://0">
 		<real name="custom_solver_bias"> 0 </real>
@@ -10,7 +10,6 @@
 
 	</resource>
 	<resource type="Animation" path="local://1">
-		<string name="resource/name"> "taken" </string>
 		<real name="length"> 8 </real>
 		<bool name="loop"> False </bool>
 		<real name="step"> 0 </real>
@@ -113,7 +112,6 @@
 
 	</resource>
 	<resource type="Animation" path="local://2">
-		<string name="resource/name"> "spin" </string>
 		<real name="length"> 1.5 </real>
 		<bool name="loop"> True </bool>
 		<real name="step"> 0.25 </real>
@@ -310,7 +308,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 2 </int>
+							<int> 1 </int>
 							<string> "sources" </string>
 							<array  len="3" shared="false">
 								<string> "res://enemy.gd" </string>
@@ -432,7 +430,7 @@
 						<int> 0 </int>
 					</dictionary>
 					<string> "__editor_plugin_screen__" </string>
-					<string> "2D" </string>
+					<string> "Script" </string>
 				</dictionary>
 				<resource  resource_type="Texture" path="res://coin.png">  </resource>
 				<int> 4 </int>

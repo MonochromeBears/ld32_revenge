@@ -16,4 +16,5 @@ func _ready():
 
 func _on_Timer_timeout():
 	#print("timeout");
-	get_node("video").play()
+	get_node("video").get_stream_name()
+	get_node("video").stop()

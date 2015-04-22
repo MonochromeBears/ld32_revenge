@@ -20,6 +20,7 @@ var rc_right=null
 var WALK_SPEED = 50
 
 var bullet_class = preload("res://bullet.gd")
+var player_class = preload("res://player.gd")
 
 func _die():
 	queue_free()
@@ -49,7 +50,6 @@ func _integrate_forces(s):
 			var dp = s.get_contact_local_normal(i)
 			
 			if (cc):
-			
 				
 				if (cc extends bullet_class and not cc.disabled):
 					set_mode(MODE_RIGID)
@@ -61,7 +61,6 @@ func _integrate_forces(s):
 					get_node("sound").play("hit")
 					
 					break
-				
 
 			if (dp.x>0.9):
 				wall_side=1.0
@@ -95,4 +94,5 @@ func _ready():
 	rc_right=get_node("raycast_right")
 
 
-
+func _on_Area2D_body_enter( body ):
+	print("1312312")

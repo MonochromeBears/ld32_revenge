@@ -13,8 +13,7 @@ func _on_body_enter( body ):
 		get_node("anim").play("taken")
 		body.get_coin()
 		taken=true
-
-
+		
 func _ready():
 	# Initalization here
 	pass

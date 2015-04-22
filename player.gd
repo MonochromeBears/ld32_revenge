@@ -25,6 +25,7 @@ extends RigidBody2D
 #  for moving platforms.
 
 var coins = 0
+var health = 100
 
 var anim=""
 var siding_left=false
@@ -49,6 +50,8 @@ var shoot_time=1e20
 var MAX_SHOOT_POSE_TIME = 0.3
 
 var bullet = preload("res://bullet.xml")
+
+
 
 
 var floor_h_velocity=0.0
@@ -243,11 +246,16 @@ func _integrate_forces(s):
 	
 
 func get_coin():
+	print("123123")
 	coins = coins + 1
 	if(coins == 30):
 		get_node("interfaice").get_node("win").set("visibility/visible", true)
 		
 	get_node("interfaice").get_node("score").set_text("Coins: " + str(coins))
+
+func get_demage():
+	health = health - 1
+	var interfaice = get_node("interfaice").get_node("health").set_text(str(health))
 
 
 func _ready():

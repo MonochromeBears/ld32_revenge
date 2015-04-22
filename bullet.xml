@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <resource_file type="PackedScene" subresource_count="5" version="1.0" version_name="Godot Engine v1.0.stable.custom_build">
-	<ext_resource path="res://sprites/row/wawe.png" type="Texture"></ext_resource>
 	<ext_resource path="res://bullet.gd" type="Script"></ext_resource>
+	<ext_resource path="res://sprites/row/note.png" type="Texture"></ext_resource>
 	<resource type="CircleShape2D" path="local://0">
 		<real name="custom_solver_bias"> 0 </real>
 		<real name="radius"> 10 </real>
@@ -197,7 +197,7 @@
 			<string> "node_count" </string>
 			<int> 6 </int>
 			<string> "variants" </string>
-			<array  len="33" shared="false">
+			<array  len="40" shared="false">
 				<node_path> "" </node_path>
 				<bool> True </bool>
 				<real> 1 </real>
@@ -207,7 +207,7 @@
 				<vector2> 1, 1 </vector2>
 				<int> 1 </int>
 				<resource  resource_type="Shape2D" path="local://0">  </resource>
-				<matrix32> 1.22861, -0, 0, 4.28373, 2.97198, -2.16144 </matrix32>
+				<matrix32> 1, -0, 0, 1, 0, 0 </matrix32>
 				<int> 0 </int>
 				<int> 2 </int>
 				<resource  resource_type="Script" path="res://bullet.gd">  </resource>
@@ -217,7 +217,7 @@
 						<string> "Script" </string>
 						<dictionary  shared="false">
 							<string> "current" </string>
-							<int> 2 </int>
+							<int> 0 </int>
 							<string> "sources" </string>
 							<array  len="3" shared="false">
 								<string> "res://enemy.gd" </string>
@@ -230,11 +230,11 @@
 							<string> "pixel_snap" </string>
 							<bool> False </bool>
 							<string> "zoom" </string>
-							<real> 1.850617 </real>
+							<real> 3.424785 </real>
 							<string> "use_snap" </string>
 							<bool> False </bool>
 							<string> "ofs" </string>
-							<vector2> -262.331, -95.3773 </vector2>
+							<vector2> -74.7573, -35.9676 </vector2>
 							<string> "snap" </string>
 							<int> 10 </int>
 						</dictionary>
@@ -341,21 +341,28 @@
 					<string> "__editor_plugin_screen__" </string>
 					<string> "2D" </string>
 				</dictionary>
-				<real> 0.559322 </real>
-				<real> 0.01 </real>
-				<real> 0.1 </real>
-				<resource  resource_type="Texture" path="res://sprites/row/wawe.png">  </resource>
-				<real> 4 </real>
+				<int> 4 </int>
+				<real> 0.5 </real>
+				<real> 3 </real>
 				<real> 0.3 </real>
-				<real> 0.2 </real>
-				<color> 1, 1, 1, 1 </color>
-				<color> 1, 0, 0, 0 </color>
-				<color> 0, 0, 0, 1 </color>
-				<vector2_array  len="0"> 					 </vector2_array>
-				<rect2> 0, 0, 0, 0 </rect2>
-				<vector2> 2.97198, -2.16144 </vector2>
-				<vector2> 1.22861, 4.28373 </vector2>
+				<resource  resource_type="Texture" path="res://sprites/row/note.png">  </resource>
+				<real> 12 </real>
+				<real> 90 </real>
+				<real> 10 </real>
+				<real> 0.7 </real>
+				<real> 2 </real>
+				<real> 0.4 </real>
 				<real> 0.1 </real>
+				<real> 0.2 </real>
+				<color> 0.853156, 0.330847, 1, 1 </color>
+				<color> 0.972516, 0.529125, 0.281274, 1 </color>
+				<color> 0.172981, 0.967272, 0.330281, 1 </color>
+				<color> 0.696722, 0.251451, 0.507437, 1 </color>
+				<vector2_array  len="0"> 					 </vector2_array>
+				<vector2> 0.10683, -0.152221 </vector2>
+				<vector2> 0.202371, 0.183051 </vector2>
+				<color> 1, 1, 1, 1 </color>
+				<rect2> 0, 0, 0, 0 </rect2>
 				<node_path> ".." </node_path>
 				<resource  resource_type="Animation" path="local://1">  </resource>
 				<array  len="0" shared="false">
@@ -363,7 +370,7 @@
 				<string> "" </string>
 			</array>
 			<string> "nodes" </string>
-			<int_array  len="312"> 				-1, -1, 1, 0, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 7, 15, 10, 16, 2, 17, 2, 18, 5, 19, 3, 20, 11, 21, 10, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 12, 28, 13, 0, 0, 0, 30, 29, -1, 66, 2, 0, 3, 1, 4, 14, 5, 2, 6, 3, 31, 7, 7, 4, 8, 5, 9, 6, 32, 7, 33, 2, 34, 15, 35, 16, 36, 5, 37, 3, 38, 4, 39, 4, 40, 3, 41, 5, 42, 3, 43, 3, 44, 17, 45, 7, 46, 7, 47, 5, 48, 18, 49, 2, 50, 5, 51, 5, 52, 5, 53, 5, 54, 5, 55, 5, 56, 5, 57, 5, 58, 19, 59, 2, 60, 5, 61, 20, 62, 5, 63, 5, 64, 5, 65, 5, 66, 5, 67, 5, 68, 5, 69, 5, 70, 5, 71, 5, 72, 5, 73, 5, 74, 5, 75, 5, 76, 5, 77, 5, 78, 5, 79, 11, 80, 5, 81, 21, 82, 2, 83, 22, 84, 2, 85, 23, 86, 2, 87, 23, 88, 24, 0, 0, 0, 90, 89, -1, 19, 2, 0, 3, 1, 4, 2, 5, 5, 6, 3, 7, 4, 8, 5, 9, 6, 91, 17, 92, 1, 93, 4, 94, 3, 95, 3, 96, 7, 97, 7, 98, 10, 99, 21, 100, 3, 101, 25, 0, 0, 0, 102, 102, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 26, 8, 5, 9, 27, 103, 8, 104, 3, 0, 0, 0, 105, 105, -1, 4, 2, 0, 106, 28, 107, 1, 108, 3, 0, 0, 0, 110, 109, -1, 9, 2, 0, 111, 7, 112, 5, 113, 29, 114, 30, 115, 1, 116, 2, 117, 31, 118, 32, 0 </int_array>
+			<int_array  len="312"> 				-1, -1, 1, 0, -1, 27, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 10, 7, 11, 8, 12, 9, 13, 3, 14, 7, 15, 10, 16, 2, 17, 2, 18, 5, 19, 3, 20, 11, 21, 10, 22, 3, 23, 3, 24, 1, 25, 4, 26, 5, 27, 12, 28, 13, 0, 0, 0, 30, 29, -1, 66, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 31, 7, 7, 4, 8, 5, 9, 6, 32, 14, 33, 15, 34, 16, 35, 17, 36, 5, 37, 1, 38, 4, 39, 4, 40, 3, 41, 2, 42, 3, 43, 3, 44, 18, 45, 7, 46, 7, 47, 5, 48, 16, 49, 19, 50, 19, 51, 5, 52, 20, 53, 21, 54, 19, 55, 19, 56, 2, 57, 5, 58, 17, 59, 22, 60, 5, 61, 23, 62, 5, 63, 2, 64, 15, 65, 24, 66, 5, 67, 5, 68, 15, 69, 5, 70, 5, 71, 5, 72, 5, 73, 5, 74, 25, 75, 26, 76, 5, 77, 26, 78, 25, 79, 14, 80, 5, 81, 27, 82, 2, 83, 28, 84, 2, 85, 29, 86, 2, 87, 30, 88, 31, 0, 0, 0, 90, 89, -1, 19, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 32, 8, 5, 9, 33, 91, 18, 92, 1, 93, 4, 94, 3, 95, 3, 96, 7, 97, 7, 98, 10, 99, 34, 100, 3, 101, 35, 0, 0, 0, 102, 102, -1, 10, 2, 0, 3, 1, 4, 2, 5, 2, 6, 3, 7, 4, 8, 5, 9, 6, 103, 8, 104, 3, 0, 0, 0, 105, 105, -1, 4, 2, 0, 106, 2, 107, 1, 108, 3, 0, 0, 0, 110, 109, -1, 9, 2, 0, 111, 7, 112, 5, 113, 36, 114, 37, 115, 1, 116, 2, 117, 38, 118, 39, 0 </int_array>
 			<string> "conns" </string>
 			<int_array  len="6"> 				4, 0, 120, 119, 2, 0 </int_array>
 		</dictionary>
